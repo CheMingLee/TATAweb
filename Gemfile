@@ -27,6 +27,8 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'devise'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -39,6 +41,12 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # bootstrap 4
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
+
+# friendly_id
+gem 'friendly_id', '~> 5.2.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
+
+# annotate
+gem 'annotate'
 
 # font-awesome-sass
 gem 'font-awesome-sass', '~> 5.0.13'

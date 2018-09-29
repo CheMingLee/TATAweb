@@ -1,0 +1,15 @@
+<%= provide(:page_title, '牠牠紀錄') %>
+<% provide(:author, 'active') %>
+
+<div class="container TC mt-5">
+    <br>
+    <div class="row mb-3">
+        <%= link_to 'New post', new_authors_post_path, class: 'btn btn-primary btn-lg' %>
+        <table class="table table-striped mt-3">
+            <tr>
+                <th colspan="4">Title</th>
+            </tr>
+            <%= render @posts %>
+        </table>
+    </div>
+</div>

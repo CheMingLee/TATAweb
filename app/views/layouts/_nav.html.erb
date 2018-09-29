@@ -1,25 +1,29 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="/">
-            <img src="images/tata_icon.jpg" width="30" height="30" class="d-inline-block align-top" alt="logo">
-            TATA
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="blog.html">Blog</a>
-                </li>
-            </ul>
-        </div>
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      牠牠<span class='text-muted'>TATA</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <%= link_to 'Home', root_path, class: "nav-link #{yield(:home_active)}" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Blog', posts_path, class: "nav-link #{yield(:blog_active)}" %>
+        </li>
+        <% if author_signed_in? %>
+          <li class="nav-item">
+            <%= link_to 'List', authors_posts_path, class: "nav-link #{yield(:author)}" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Logout', destroy_author_session_path, method: :delete, class: "nav-link" %>
+          </li>
+        <% end %>
+      </ul>
     </div>
+  </div>
 </nav>

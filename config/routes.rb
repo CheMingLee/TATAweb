@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  devise_for :authors
+  root "blog/home#index"
 
-  root "home#index"
+  namespace :authors do
+    resources :posts
+  end
 
-  get "about", to: "home#about"
-
-  get "blog", to: "home#blog"
+  scope module: "blog" do
+    get "posts", to: "posts#index", as: :posts
+    get "posts/:id", to: "posts#show", as: :post
+  end
 end
