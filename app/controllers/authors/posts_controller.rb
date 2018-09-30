@@ -5,7 +5,7 @@ module Authors
     # GET /posts
     # GET /posts.json
     def index
-      @posts = current_author.posts.most_recent
+      @posts = Post.most_recent
     end
 
     # GET /posts/1
@@ -15,7 +15,7 @@ module Authors
 
     # GET /posts/new
     def new
-      @post = current_author.posts.new
+      @post = Post.new
     end
 
     # GET /posts/1/edit
@@ -25,7 +25,7 @@ module Authors
     # POST /posts
     # POST /posts.json
     def create
-      @post = current_author.posts.new(post_params)
+      @post = Post.new(post_params)
 
       respond_to do |format|
         if @post.save
@@ -65,7 +65,7 @@ module Authors
     private
       # Use callbacks to share common setup or constraints between actions.
       def set_post
-        @post = current_author.posts.friendly.find(params[:id])
+        @post = Post.friendly.find(params[:id])
       end
 
       # Never trust parameters from the scary internet, only allow the white list through.
