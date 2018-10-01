@@ -3,9 +3,6 @@ module Blog
     PRODUCTS_COUNT = 21
     LIMITED_PRODUCTS_NUMBER = 9
 
-    def index
-    end
-
     def market
       if params[:page]
         @page = params[:page].to_i
@@ -25,9 +22,9 @@ module Blog
       (1..PRODUCTS_COUNT).each do |index|
         product = {
             id: index,
-            name: "柳橙汁#{index}",
-            price: "NT$3000",
-            image_url: "images/TATA獨角獸2.jpg",
+            name: "TATA獨角獸#{index}",
+            price: "NT$0",
+            image_url: "https://scontent.ftpe8-3.fna.fbcdn.net/v/t1.0-9/32349502_809483579249473_4474655649489223680_o.jpg?_nc_cat=110&oh=4fce2e07b4bd4bf6a8f2e290edaa1227&oe=5C1A09A3",
         }
 
         @products << product
