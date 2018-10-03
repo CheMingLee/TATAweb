@@ -1,3 +1,3 @@
 class BlogController < ApplicationController
-  layout "blog"
+  layout "author"
 end
