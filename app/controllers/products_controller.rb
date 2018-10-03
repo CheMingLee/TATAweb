@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  skip_before_actioin :verify_authenticity_token
   LIMITED_PRODUCTS_NUMBER = 3
 
   def index
