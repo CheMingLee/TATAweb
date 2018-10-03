@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   skip_before_action :verify_authenticity_token
-  LIMITED_PRODUCTS_NUMBER = 3
+  LIMITED_PRODUCTS_NUMBER = 9
 
   def index
     if params[:page]
