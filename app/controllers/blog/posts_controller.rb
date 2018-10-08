@@ -1,5 +1,5 @@
 module Blog
-  class PostsController < BlogController
+  class PostsController < ApplicationController
 
     # GET /posts
     # GET /posts.json

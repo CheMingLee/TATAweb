@@ -10,6 +10,13 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+    <script>tinymce.init({
+      height: '500',
+      selector:'textarea',
+      plugins: "codesample image media link code",
+      toolbar: "undo redo | styleselect | bold italic link | codesample image media | code"
+    });</script>
   </head>
 
   <body>

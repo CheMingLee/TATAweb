@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_author!, only: [:new, :create, :edit, :update, :destroy]
   LIMITED_PRODUCTS_NUMBER = 9
 
   def index

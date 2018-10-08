@@ -25,10 +25,10 @@ module Authors
     # POST /posts
     # POST /posts.json
     def create
-      @post = Post.new(post_params)
+      post = Post.create(post_params)
 
       respond_to do |format|
-        if @post.save
+        if post.save
           format.html { redirect_to authors_posts_path(@post), notice: 'Post was successfully created.' }
           format.json { render :show, status: :created, location: @post }
         else
