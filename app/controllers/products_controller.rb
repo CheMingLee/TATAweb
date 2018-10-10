@@ -9,7 +9,7 @@ class ProductsController < ApplicationController
       @page = 1
     end
 
-    @products = Product.all
+    @products = Product.most_recent
 
     @first_page = 1
     count = @products.count

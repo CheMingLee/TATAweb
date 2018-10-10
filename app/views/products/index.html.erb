@@ -9,7 +9,7 @@
         <div class="card mb-4 shadow-sm">
           <img class="card-img-top" src=<%= product[:image_url] %> alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title"><%= "#{product.id}. #{product.name}" %></h5>
+            <h5 class="card-title"><%= "#{product.name}" %></h5>
             <div class="mb-1 text-muted">NT$<%= product.price %></div>
             <% if author_signed_in? %>
               <div>
