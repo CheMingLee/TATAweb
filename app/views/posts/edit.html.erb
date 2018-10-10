@@ -1,0 +1,41 @@
+<%= provide(:page_title, "Edit #{@post.title}") %>
+<% provide(:author, 'active') %>
+
+<%= form_for @post, method: :put do |form|%>
+  <div class="container TC mt-5">
+    <br>
+    <div class="row mb-3">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><%= yield(:page_title) %></h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="field">
+                <%= form.label :title %>
+                <%= form.text_field :title, class: 'form-control' %>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="field">
+                <%= form.label :banner_image_url %>
+                <%= form.text_field :banner_image_url, class: 'form-control' %>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="actions">
+                <%= form.submit "Save blog post", class: 'btn btn-success btn-block' %>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="field">
+          <%= form.text_area :body %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

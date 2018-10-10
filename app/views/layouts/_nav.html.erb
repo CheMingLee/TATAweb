@@ -17,9 +17,6 @@
         </li>
         <% if author_signed_in? %>
           <li class="nav-item">
-            <%= link_to 'List', authors_posts_path, class: "nav-link #{yield(:author)}" %>
-          </li>
-          <li class="nav-item">
             <%= link_to 'Logout', destroy_author_session_path, method: :delete, class: "nav-link" %>
           </li>
         <% end %>

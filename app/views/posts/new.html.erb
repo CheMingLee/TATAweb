@@ -1,16 +1,7 @@
-<%= form_for(post, url: url) do |form| %>
-  <% if post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+<%= provide(:page_title, 'New Post') %>
+<% provide(:author, 'active') %>
 
-      <ul>
-      <% post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+<%= form_for @post, method: :post do |form|%>
   <div class="container TC mt-5">
     <br>
     <div class="row mb-3">
@@ -47,5 +38,4 @@
       </div>
     </div>
   </div>
-
 <% end %>
