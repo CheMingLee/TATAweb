@@ -1,5 +1,5 @@
-<%= provide(:page_title, 'New Post') %>
-<% provide(:author, 'active') %>
+<%= provide(:page_title, '新增文章') %>
+<% provide(:add_post_active, 'active') %>
 
 <%= form_for @post, method: :post do |form|%>
   <div class="container TC mt-5">
@@ -25,7 +25,7 @@
             </li>
             <li class="list-group-item">
               <div class="actions">
-                <%= form.submit "Save blog post", class: 'btn btn-success btn-block' %>
+                <%= form.submit "新增文章", class: 'btn btn-success btn-block' %>
               </div>
             </li>
           </ul>

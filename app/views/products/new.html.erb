@@ -1,5 +1,5 @@
 <%= provide(:page_title, '新增產品') %>
-<% provide(:market_active, 'active') %>
+<% provide(:add_product_active, 'active') %>
 
 <%= form_for @product, method: :post do |f|%>
   <div class="container TC mt-5">
@@ -31,7 +31,7 @@
             </li>
             <li class="list-group-item">
               <div class="actions">
-                <%= f.submit "新增", class: 'btn btn-success btn-block' %>
+                <%= f.submit "新增產品", class: 'btn btn-success btn-block' %>
               </div>
             </li>
           </ul>

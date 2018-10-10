@@ -1,5 +1,5 @@
-<%= provide(:page_title, "Edit #{@post.title}") %>
-<% provide(:author, 'active') %>
+<%= provide(:page_title, "編輯 #{@post.title}") %>
+<% provide(:home_active, 'active') %>
 
 <%= form_for @post, method: :put do |form|%>
   <div class="container TC mt-5">
@@ -25,7 +25,7 @@
             </li>
             <li class="list-group-item">
               <div class="actions">
-                <%= form.submit "Save blog post", class: 'btn btn-success btn-block' %>
+                <%= form.submit "更新文章", class: 'btn btn-success btn-block' %>
               </div>
             </li>
           </ul>
