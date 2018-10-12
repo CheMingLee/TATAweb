@@ -15,7 +15,7 @@
 
 class Author < ApplicationRecord
   # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable, :registerable, and :omniauthable
+  # :confirmable, :lockable, :timeoutable, :trackable, :omniauthable, :registerable
   devise :database_authenticatable, :recoverable, :rememberable, :validatable
   has_many :posts
 end

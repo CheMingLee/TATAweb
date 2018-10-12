@@ -12,13 +12,14 @@ class ProductsController < ApplicationController
     @products = Product.most_recent
 
     @first_page = 1
-    count = @products.count
-    
-    @last_page = ( count / LIMITED_PRODUCTS_NUMBER )
-    if (count % LIMITED_PRODUCTS_NUMBER)
-      @last_page += 1
+    products_count = @products.count
+
+    if products_count % LIMITED_PRODUCTS_NUMBER == 0
+      @last_page = ( products_count / LIMITED_PRODUCTS_NUMBER )
+    else
+      @last_page = ( products_count / LIMITED_PRODUCTS_NUMBER ) + 1
     end
-        
+
     @products = @products.offset((@page - 1) * LIMITED_PRODUCTS_NUMBER).limit(LIMITED_PRODUCTS_NUMBER)
   end
 
