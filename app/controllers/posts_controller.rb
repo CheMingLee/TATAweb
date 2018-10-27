@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_author!, except: [:index, :show]
-  LIMITED_POSTS_NUMBER = 3
+  LIMITED_POSTS_NUMBER = 6
 
   def index
     if params[:page]
