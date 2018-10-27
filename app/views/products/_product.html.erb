@@ -1,0 +1,17 @@
+<div class="col-sm-6 col-lg-4 text-center">
+  <div class="card mb-4 shadow-sm">
+    <img class="card-img-top" src=<%= product[:image_url] %> alt="Card image cap">
+    <div class="card-body">
+      <%= link_to product_path(product) do %>
+        <h5 class="card-title"><%= "#{product.name}" %></h5>
+      <% end %>
+      <div class="mb-1 text-muted">NT$<%= product.price %></div>
+      <% if author_signed_in? %>
+        <div>
+          <%= link_to "Edit", edit_product_path(product), class: "btn btn-primary" %>
+          <%= link_to "Delete", product_path(product), method: :delete, class: "btn btn-danger", data: { confirm: "Are you sure?" } %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

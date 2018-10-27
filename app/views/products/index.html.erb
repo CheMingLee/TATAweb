@@ -1,26 +1,29 @@
 <%= provide(:page_title, '牠牠賣場') %>
 <% provide(:market_active, 'active') %>
 
+<header>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active" style="background-image: url('https://scontent.ftpe8-3.fna.fbcdn.net/v/t1.0-9/43567144_936020993262397_174148683196006400_o.jpg?_nc_cat=109&_nc_ht=scontent.ftpe8-3.fna&oh=9ebc6fc9558296dd162c3c7d9de4e93e&oe=5C48F181')"></div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</header>
+
 <div class="container TC mt-5">
   <br>
   <div class="row">
-    <% @products.each do |product| %>
-      <div class="col-sm-6 col-lg-4 text-center">
-        <div class="card mb-4 shadow-sm">
-          <img class="card-img-top" src=<%= product[:image_url] %> alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title"><%= "#{product.name}" %></h5>
-            <div class="mb-1 text-muted">NT$<%= product.price %></div>
-            <% if author_signed_in? %>
-              <div>
-                <%= link_to "Edit", edit_product_path(product), class: "btn btn-primary" %>
-                <%= link_to "Delete", product_path(product), method: :delete, class: "btn btn-danger", data: { confirm: "Are you sure?" } %>
-              </div>
-            <% end %>
-          </div>
-        </div>
-      </div>
-    <% end %>
+    <%= render @products %>
   </div>
   <nav aria-label="Page navigation example">
     <ul class="pagination">

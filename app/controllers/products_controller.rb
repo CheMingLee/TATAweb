@@ -23,31 +23,36 @@ class ProductsController < ApplicationController
     @products = @products.offset((@page - 1) * LIMITED_PRODUCTS_NUMBER).limit(LIMITED_PRODUCTS_NUMBER)
   end
 
+  def show
+    @product = Product.find_by_id(params[:id])
+  end
+
   def new
     @product = Product.new
   end
 
   def create
     product = Product.create(product_permit)
-    
     redirect_to action: :index
   end
 
   def edit
-    @product = Product.find(params[:id])
+    @product = Product.find_by_id(params[:id])
+    if @product.blank?
+      redirect_to root_path
+      return
+    end
   end
   
   def update    
     product = Product.find(params[:id])
-    product.update(product_permit)
-    
+    product.update(product_permit)   
     redirect_to action: :index
   end
   
   def destroy
     product = Product.find(params[:id])
     product.destroy
-    
     redirect_to action: :index
   end
   
