@@ -6,6 +6,12 @@
         <h5 class="card-title"><%= "#{post.title}" %></h5>
       <% end %>
       <div class="mb-1 text-muted"><%= post.display_day_published %></div>
+      <% if author_signed_in? %>
+        <div>
+          <%= link_to "Edit", edit_post_path(post), class: "btn btn-primary" %>
+          <%= link_to "Delete", post_path(post), method: :delete, class: "btn btn-danger", data: { confirm: "Are you sure?" } %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

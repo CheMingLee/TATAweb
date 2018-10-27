@@ -14,7 +14,11 @@
   <div class="row mb-5">
     <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-center">
       <h1><%= @product.name %></h1>
+      <% if false %>
       <p>NT$<%= @product.price %></p>
+      <% end %>
+      <a href="https://cashier.ecpay.com.tw/store/tatafortaiwan" class="btn btn-success btn-block">購買</a>
+      <br>
       <%= @product.description.html_safe %>
     </div>
   </div>
