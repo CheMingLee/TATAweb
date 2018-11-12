@@ -1,8 +1,8 @@
 <%= provide(:page_title, '浪，我幫你說') %>
 <% provide(:home_active, 'active') %> 
 
-<header>
-  <div id="carouselExampleFade" class="carousel slide carousel-fade mt-5" data-ride="carousel">
+<div class="container mt-5">
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img class="d-block w-100" src="https://images2.imgbox.com/5d/6e/Hac84fRd_o.jpg" alt="First slide">
@@ -23,9 +23,9 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-</header>
+</div>
 
-<div class="container-fluid TC">
+<div class="container TC">
   <br>
   <div class="row">
     <%= render @posts %>
@@ -55,9 +55,12 @@
   </nav>
 </div>
 
-<div class="jumbotron TC">
-  <div class="row">
-    <%= render @products %>
+<div class="container-fluid TC bg-light">
+  <div class="container">
+    <br>
+    <div class="row">
+      <%= render @products %>
+    </div>
   </div>
 </div>
 

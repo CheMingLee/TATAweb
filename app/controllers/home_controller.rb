@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-    LIMITED_POSTS_NUMBER = 3
+    LIMITED_POSTS_NUMBER = 6
 
     def index
       if params[:page]
