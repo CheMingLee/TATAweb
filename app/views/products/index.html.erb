@@ -11,11 +11,24 @@
   </div>
 </div>
 
+<div class="container-fluid TC text-center bg-light">
+  <div class="container">
+    <div class="d-flex justify-content-center">
+      <div class="col-sm-6 my-5">
+        <h2><strong>5% For The Animals</strong></h2>
+        <br>
+        <p class="text-muted">我們會將飼料營收的百分之五回饋到生命教育課程上<br>希望透過教育來打造零棄養的未來</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="container TC">
   <br>
-  <div class="row">
+  <div class="d-flex justify-content-center">
     <%= render @products %>
   </div>
+  <% if false %>
   <nav aria-label="Page navigation example">
     <ul class="pagination">
       <% if @page > @first_page %>
@@ -39,4 +52,5 @@
       <% end %>
     </ul>
   </nav>
+  <% end %>
 </div>
