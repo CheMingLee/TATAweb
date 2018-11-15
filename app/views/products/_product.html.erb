@@ -1,22 +1,13 @@
-<div class="col-sm-6 col-lg-4 text-center">
-  <div class="card mb-4 shadow-sm">
-    <img class="card-img-top" src=<%= product[:image_url] %> alt="Card image cap">
-    <div class="card-body">
-      <%= link_to product_path(product) do %>
-        <h5 class="card-title"><%= "#{product.name}" %></h5>
-      <% end %>
-      <% if false %>
-      <div class="mb-1 text-muted">NT$<%= product.price %></div>
-      <% end %>
-      <br>
-      <a href="https://cashier.ecpay.com.tw/store/tatafortaiwan" class="btn btn-success btn-block">購買</a>
-      <br>
-      <% if author_signed_in? %>
-        <div>
-          <%= link_to "Edit", edit_product_path(product), class: "btn btn-primary" %>
-          <%= link_to "Delete", product_path(product), method: :delete, class: "btn btn-danger", data: { confirm: "Are you sure?" } %>
-        </div>
-      <% end %>
-    </div>
+<div class="col-sm-6 col-lg-4 text-center mt-3 mb-2">
+  <%= link_to product_path(product) do %>
+    <img class="card-img" src=<%= product[:image_url] %> alt="Card image cap">
+  <% end %>
+  <div class="card-body">
+    <% if author_signed_in? %>
+      <div>
+        <%= link_to "Edit", edit_product_path(product), class: "btn btn-primary" %>
+        <%= link_to "Delete", product_path(product), method: :delete, class: "btn btn-danger", data: { confirm: "Are you sure?" } %>
+      </div>
+    <% end %>
   </div>
 </div>

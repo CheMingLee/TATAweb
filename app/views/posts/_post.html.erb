@@ -1,11 +1,10 @@
-<div class="col-sm-6 col-lg-4">
-  <div class="card mb-4 shadow-sm">
-    <img class="card-img-top" src=<%= post.banner_image_url %> alt="Card image cap">
-    <div class="card-body">
-      <%= link_to post_path(post) do %>
-        <h5 class="card-title"><%= "#{post.title}" %></h5>
-      <% end %>
-      <div class="mb-1 text-muted"><%= post.display_day_published %></div>
+<div class="col-sm-6 col-lg-4 text-center">
+  <div class="card border-light mb-4">
+    <%= link_to post_path(post) do %>
+      <img class="card-img" src=<%= post.banner_image_url %> alt="Card image cap">
+    <% end %>
+    <div class="card-body bg-light">
+      <h5 class="card-title"><%= "#{post.title}" %></h5>
       <% if author_signed_in? %>
         <div>
           <%= link_to "Edit", edit_post_path(post), class: "btn btn-primary" %>

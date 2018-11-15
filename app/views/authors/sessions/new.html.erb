@@ -4,11 +4,11 @@
 <div class="container TC mt-5 mb-3">
   <br>
   
-  <div class="row">
+  <div class="d-flex justify-content-center">
     <h2>Log in</h2>
   </div>
 
-  <div class="row">
+  <div class="d-flex justify-content-center">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field">
         <%= f.label :email %><br />
@@ -33,6 +33,8 @@
     <% end %>
   </div>
 
-  <%= render "devise/shared/links" %>
-
+  <div class="d-flex justify-content-center">
+    <%= render "devise/shared/links" %>
+  </div>
+  
 </div>
