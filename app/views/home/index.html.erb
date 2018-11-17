@@ -44,36 +44,11 @@
   </div>
 </div>
 
-<div class="container-fluid TC bg-light">
+<div class="container-fluid TC slider-bg">
   <div class="container TC">
     <br>
-    <div class="row mt-5">
+    <div class="row slider-responsive">
       <%= render @posts %>
-    </div>
-    <div class="row">
-    <nav aria-label="Page navigation example">
-      <ul class="pagination">
-        <% if @page > @first_page %>
-          <li class="page-item">
-              <a class="page-link text-muted" href="<%= root_path(page: (@page - 1)) %>" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-                <span class="sr-only">Previous</span>
-              </a>
-          </li>
-        <% end %>
-        <% (@first_page..@last_page).each do |page_number| %>
-          <li class="page-item"><a class="page-link text-muted" href="<%= root_path(page: page_number)%>"><%= page_number %></a></li>
-        <% end %>
-        <% if @page < @last_page %>
-          <li class="page-item">
-            <a class="page-link text-muted" href="<%= root_path(page: (@page + 1)) %>" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-              <span class="sr-only">Next</span>
-            </a>
-          </li>
-        <% end %>
-      </ul>
-    </nav>
     </div>
   </div>
 </div>

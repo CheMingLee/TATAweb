@@ -3,6 +3,7 @@
     <img class="card-img" src=<%= product[:image_url] %> alt="Card image cap">
   <% end %>
   <div class="card-body">
+    <h5 class="card-title"><%= "#{product.name}" %></h5>
     <% if author_signed_in? %>
       <div>
         <%= link_to "Edit", edit_product_path(product), class: "btn btn-primary" %>
