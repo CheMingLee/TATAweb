@@ -6,13 +6,13 @@ $(document).ready(function(){
     slidesToShow: 3,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 992,
         settings: {
           slidesToShow: 2,
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 576,
         settings: {
           slidesToShow: 1,
           arrows: false

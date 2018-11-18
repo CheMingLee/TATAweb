@@ -5,16 +5,16 @@
   <br>
   <% if author_signed_in? %>
     <div class="row">
-      <div class="col-md-10">
+      <div class="col">
         <%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-sm btn-warning' %>
         <%= link_to 'Remove', post_path(@post), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-sm btn-danger' %>
       </div>
     </div>
   <% end %>
-  <div class="row mb-5">
-    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-center">
-      <h1><%= @post.title %></h1>
-      <p><%= @post.display_day_published %></p>
+  <div class="d-flex justify-content-center mb-5">
+    <div class="col-md-10 col-lg-8">
+      <h1 class="text-center"><%= @post.title %></h1>
+      <p class="text-muted text-center"><%= @post.display_day_published %></p>
       <%= @post.body.html_safe %>
     </div>
   </div>
