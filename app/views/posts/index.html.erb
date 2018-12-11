@@ -1,6 +1,7 @@
 <%= provide(:page_title, 'Blog') %>
 <% provide(:blog_active, 'active') %>
 
+<% if false %>
 <div class="container mt-5">
   <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
@@ -10,8 +11,9 @@
     </div>
   </div>
 </div>
+<% end %>
 
-<div class="container TC">
+<div class="container TC mt-5">
   <br>
   <div class="row">
     <%= render @posts %>

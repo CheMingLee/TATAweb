@@ -4,6 +4,9 @@
   <% end %>
   <div class="card-body">
     <h5 class="card-title"><%= "#{product.name}" %></h5>
+    <% if false %>
+    <p class="text-center text-muted">NT$<%= "#{product.price}" %></p>
+    <% end %>
     <% if author_signed_in? %>
       <div>
         <%= link_to "Edit", edit_product_path(product), class: "btn btn-primary" %>

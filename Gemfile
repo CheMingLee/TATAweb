@@ -27,8 +27,6 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-gem 'devise'
-
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -37,6 +35,12 @@ gem 'devise'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+
+# devise
+gem 'devise'
+
+# rails admin
+gem 'rails_admin', '~> 1.3'
 
 # bootstrap 4
 gem 'bootstrap', '~> 4.1.1'
@@ -49,7 +53,7 @@ gem 'friendly_id', '~> 5.2.0' # Note: You MUST use 5.0.0 or greater for Rails 4.
 gem 'annotate'
 
 # font-awesome-sass
-gem 'font-awesome-sass', '~> 5.0.13'
+# gem 'font-awesome-sass', '~> 5.0.13'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

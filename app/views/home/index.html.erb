@@ -2,6 +2,8 @@
 <% provide(:home_active, 'active') %> 
 
 <div class="container mt-5">
+  <img src="images/banner_index.png" width="100%">
+  <% if false %>
   <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -23,6 +25,7 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
+  <% end %>
 </div>
 
 <div class="container-fluid TC text-center bg-light">
@@ -51,12 +54,4 @@
       <%= render @posts %>
     </div>
   </div>
-</div>
-
-<div class="container text-center my-5">
-  <div class="fa-2x">
-    <i class="far fa-paper-plane"></i>
-  </div>
-  <br>
-  <h4 class="text-muted">tata@tatafortaiwan.com</h4>
 </div>

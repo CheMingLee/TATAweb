@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :authenticate_author!, only: [:new, :create, :edit, :update, :destroy]
-  LIMITED_PRODUCTS_NUMBER = 6
+  LIMITED_PRODUCTS_NUMBER = 3
 
   def index
     if params[:page]
@@ -47,7 +47,7 @@ class ProductsController < ApplicationController
   def update    
     product = Product.find(params[:id])
     product.update(product_permit)   
-    redirect_to action: :index
+    redirect_to product_path(product)
   end
   
   def destroy

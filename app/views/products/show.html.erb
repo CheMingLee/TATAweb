@@ -15,11 +15,11 @@
     <div class="col-md-10 col-lg-8">
       <h1 class="text-center"><%= @product.name %></h1>
       <% if false %>
-        <p>NT$<%= @product.price %></p>
+      <p class="text-center text-muted">NT$<%= @product.price %></p>
       <% end %>
       <br>
       <%= @product.description.html_safe %>
-      <a href="https://cashier.ecpay.com.tw/store/tatafortaiwan" class="btn btn-success btn-block">前往賣場選購</a>
+      <button type="button" class="btn btn-success btn-block" onclick="window.open('https://cashier.ecpay.com.tw/product/Xv0b7kwBZj5gBKyWdq43')">前往賣場選購</button>
     </div>
   </div>
 </div>
