@@ -2,20 +2,15 @@
 // All this logic will automatically be available in application.js.
 
 $(document).ready(function(){
+  $('.single-item').slick();
   $('.slider-responsive').slick({
-    slidesToShow: 3,
+    slidesToShow: 2,
+    centerMode: true,
     responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-        }
-      },
       {
         breakpoint: 576,
         settings: {
           slidesToShow: 1,
-          centerMode: true,
           arrows: false
         }
       }
