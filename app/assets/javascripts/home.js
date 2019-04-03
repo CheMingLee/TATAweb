@@ -4,7 +4,7 @@
 $(document).ready(function(){
   $('.single-item').slick();
   $('.slider-responsive').slick({
-    slidesToShow: 2,
+    slidesToShow: 3,
     centerMode: true,
     responsive: [
       {
