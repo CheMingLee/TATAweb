@@ -43,7 +43,7 @@ gem 'devise'
 gem 'rails_admin', '~> 1.3'
 
 # bootstrap 4
-gem 'bootstrap', '~> 4.1.1'
+gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 
 # friendly_id
